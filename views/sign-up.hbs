@@ -1,10 +1,14 @@
-<h1>Sign up</h1>
-<form action="/sign-up" method="post">
-  <label for="">Email</label>
-  <input type="email" name="email" id="">
-  <label for="">Subject</label>
-  <input type="text" name="subject" id="">
-  <label for="">Message</label>
-  <textarea type="text" name="message" id=""></textarea>
-  <button type="submit">Submit</button>
-</form>
+<div class="container">
+  <form action="/sign-up" method="post">
+    <label for="name" class="normal-text">Name</label>
+    <input type="text" name="name" id="name-input" class="normal-text">
+    <label for="password" class="normal-text">Password</label>
+    <input type="text" name="password" id="password-input" class="normal-text">
+    <label for="email" class="normal-text">Email</label>
+    <input type="text" name="email" id="email-input" class="normal-text">
+    <button type="submit" class="normal-text">Sign up</button>
+    {{#if message}}
+    <div class="error-message" class="normal-text">{{ message }}</div>
+    {{/if}}
+  </form>
+</div>
